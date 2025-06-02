@@ -25,7 +25,7 @@ public class Taskwrite {
         }
         try {
           BufferedReader reader = new BufferedReader(new FileReader("users.txt"));
-            String text = reader.readLine();
+          String text = reader.readLine();
             while(text != null){
                 System.out.println(text);
                 break;
