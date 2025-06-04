@@ -1,0 +1,27 @@
+package org.example.ders48;
+
+import java.util.Scanner;
+
+public class Task {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] numbers = new int[5];
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Enter number: ");
+            numbers[i] = scanner.nextInt();
+        }
+
+        int max = numbers [0];
+        int min = numbers[0];
+
+        for (int num : numbers) {
+            if (num < min) {
+                min = num;
+            } else if (num > max) {
+                max = num;
+            }
+        }
+        System.out.println("Minimum number is: " +min);
+        System.out.println("Maximum number is:  " +max);
+    }
+}
