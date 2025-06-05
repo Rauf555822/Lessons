@@ -1,6 +1,6 @@
 package org.example.ders15;
 
-public class Car1 extends Neqliyyat {
+public class Car extends Neqliyyat {
     @Override
     public void start() {
         System.out.println("vasiteni ise salir");
