@@ -5,14 +5,29 @@ plugins {
 group = 'org.example'
 version = '1.0-SNAPSHOT'
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_22
+    targetCompatibility = JavaVersion.VERSION_22
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-    implementation("org.projectlombok:lombok:1.18.38")
+    // Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.34'
+    annotationProcessor 'org.projectlombok:lombok:1.18.34'
+
+    // JUnit Jupiter
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.13.0-M3'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.13.0-M3'
+
+    // Spring Boot WebFlux (starter)
+    implementation 'org.springframework.boot:spring-boot-starter-webflux:4.0.0-M1'
+
+    // Spring WebFlux core (əlavə)
+    implementation 'org.springframework:spring-webflux:7.0.0-M7'
 }
 
 test {
